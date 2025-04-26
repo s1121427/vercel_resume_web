@@ -244,3 +244,39 @@ section {
 .work ol li {
     margin-bottom: 5px;
 }
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+
+    .work ul, .work ol {
+        padding-left: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
