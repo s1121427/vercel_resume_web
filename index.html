@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>何東霓履歷網站</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header class="header">
+        <div class="header-left">
+            <img src="static/image/profile.jpg" alt="大頭照" class="profile-img">
+        </div>
+        <div class="header-right">
+            <div class="header-info">
+                <h1>何東霓</h1>
+                <p>資管二A 411214276</p>
+                <p>郵件：<a href="mailto:s1121427@pu.edu.tw">s1121427@pu.edu.tw</a></p>
+                <p>手機：<a href="tel:+886-912-310821">0912-310821</a></p>
+                <p>GitHub：<a href="https://github.com/s1121427" target="_blank">https://github.com/s1121427</a></p>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-me">
+        <h2>關於我</h2>
+        <p>我是一位喜歡學習新事物的人，具備多種資訊技能，擅長將創意融入資訊中，平時的愛好就是唱唱歌，學習更多網頁設計相關的知識，多樣化的興趣讓我可以成為多角化人才。</p>
+    </section>
+
+    <section class="skills">
+        <h2>技能</h2>
+        <div class="skills-list">
+            <span>C</span>
+            <span>Java</span>
+            <span>Python</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+        </div>
+    </section>
+
+    <section class="experience">
+        <h2>經歷</h2>
+            <ul>
+                <li><a href="https://s1121427-resume.vercel.app/" target="_blank">開發個人履歷網站</a></li>
+                <li><a href="http://159.54.161.1/moodle" target="_blank">架設個人Moodle教學網站</a></li>
+            </ul>
+    </section>
+
+    <section class="holland">
+        <h2>興趣何倫碼測驗結果</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="static/image/holland/1.png" alt="photo1">
+            </div>
+            <div class="image-item">
+                <img src="static/image/holland/2.png" alt="photo2">
+            </div>
+            <div class="image-item">
+                <img src="static/image/holland/3.png" alt="photo3">
+            </div>
+            <div class="image-item">
+                <img src="static/image/holland/4.png" alt="photo4">
+            </div>
+        </div>
+    </section>
+
+    <section class="work">
+        <h2>未來想從事的工作</h2>
+        <ul>
+            <li>
+                <strong>網頁設計工程師</strong><br>
+                <span class="job-description">工作內容：撰寫程式與設計畫面，打造美觀好用的網頁。</span><br>
+                <span class="job-description">工作任務：</span>
+                <ol>
+                    <li>根據客戶需求或產品規格設計網站的外觀、功能及使用者介面，並負責前端和後端的開發工作。</li>
+                    <li>使用 HTML、CSS、JavaScript、PHP 等技術編寫網站的程式碼，並確保網站的功能性和效能。</li>
+                    <li>與客戶進行交流，了解其需求，並將這些需求轉化為具體的技術解決方案。</li>
+                </ol>
+
+            </li>
+            <li>
+                <strong>資訊相關教師</strong><br>
+                <span class="job-description">工作內容：教授資訊技能、指導學生專題製作與問題解決。</span><br>
+                <span class="job-description">工作任務：</span>
+                <ol>
+                    <li>(必備)持有合格教師證。</li>
+                    <li>具備資訊相關科系畢業，最高學歷學士以上。</li>
+                    <li>專業證照及個人得獎紀錄。</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy;Copyright © 2025 何東霓. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="js/particles-config.js"></script>
+
+    <script>
+    const carouselImages = document.querySelector('.carousel-images');
+    const images = document.querySelectorAll('.carousel-images img');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const width = images[0].clientWidth;
+        carouselImages.style.transform = `translateX(${-width * currentIndex}px)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateCarousel();
+    });
+
+    window.addEventListener('resize', updateCarousel);
+    </script>
+
+</body>
+</html>
